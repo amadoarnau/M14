@@ -1,0 +1,26 @@
+<!doctype html>
+
+{% if mes %}
+  <title>Calendari de {{ mes }}</title>
+  <h1>{{ mes }}</h1>
+{% else %}
+  <title>Calendari d'aquest mes</title>
+  <h1>Calendari d'aquest mes!</h1>
+{% endif %}
+
+<ul>
+        {% for n in cal %}
+        <li>{{n}}</li>
+        {% endfor %}
+      </ul>
+
+<table>
+                        {% for n in range(1,5) %}
+                        <tr>
+                            {% for i in range(1,8) %}
+                                
+                                <td>{{i+7}}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
